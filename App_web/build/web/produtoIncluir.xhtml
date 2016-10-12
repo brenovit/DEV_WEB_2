@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Incluir Produto</title>
+         <h:outputStylesheet library="css" name="main.css"/>
+    </h:head>
+    <h:body style = "background-color: #DCDCDC">        
+       <section id="main" class="container 75%">
+					<header>
+						<h2>Incluir Produto</h2>
+						<p>Insira os dados do produto a ser cadastrado</p>
+					</header>
+        <div class="box">
+            <h:form>        
+               <div class="row uniform 50%">
+            <h:outputLabel value="Nome:"/>
+            <h:inputText value="#{produtoFaces.dto.nome}" maxlength="100"/>  <"--maxlength.: o usuario só poderá inserir 100 digitos-->
+            </div> 
+                <div class="row uniform 50%">
+            <h:outputLabel value="Descrição"/>
+            <h:inputText value="#{produtoFaces.dto.descricao}"/>
+            </div> 
+                <div class="row uniform 50%">
+            <h:outputLabel value="Valor: " />
+                <h:inputText value="#{produtoFaces.dto.preco}"/>
+               
+            </div> 
+                <div class="row uniform 50%">
+            <h:outputLabel value="Validade:"/>
+            <h:inputText value="#{produtoFaces.dto.validade}">
+                <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime> <!-- Convertendo data -->
+            </h:inputText>
+                </div>               
+               
+                 <div class="row uniform">
+                    <div class="12u">
+                        <ul class="actions align-center">
+                            <li><h:commandButton value="Inserir" action="#{produtoFaces.finalizaInclusao()}"/></li>
+                            <li><h:commandButton value="Voltar" action="voltarListagem" /></li>
+		       </ul>
+		</div>
+	       </div>
+                
+                  <!--  <table border="1">
+                    <thead>
+                        <tr>
+                            <th><h:outputLabel value="Nome:"/></th>
+                            <th><h:inputText value="#{produtoFaces.dto.nome}"/></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h:outputLabel value="Descrição"/></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>  -->
+                                                                             
+        </h:form>
+        </div>    
+       </section>
+    </h:body>
+</html>
+
