@@ -2,12 +2,20 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="produtoIncluir.xhtml" x="131" y="70" zoom="false"/>
-        <Node id="index.xhtml" x="109" y="518" zoom="true"/>
-        <Node id="padrao.xhtml" x="393" y="69" zoom="true"/>
-        <Node id="produtolb.xhtml" x="148" y="331" zoom="true"/>
-        <Node id="VisualizarProduto.xhtml" x="391" y="132" zoom="true"/>
-        <Node id="ProdutoAlterar.xhtml" x="407" y="513" zoom="true"/>
+        <Node id="produto_alterar.xhtml" x="677" y="579" zoom="true"/>
+        <Node id="produto_visualizar.xhtml" x="815" y="476" zoom="true"/>
+        <Node id="index.xhtml" x="414" y="329" zoom="true"/>
+        <Node id="produto_incluir.xhtml" x="744" y="165" zoom="true"/>
+        <Node id="usuario_incluir.xhtml" x="69" y="129" zoom="true"/>
+        <Node id="usuario_index.xhtml" x="84" y="307" zoom="true"/>
+        <Node id="produto_index.xhtml" x="676" y="326" zoom="true"/>
+        <Node id="produtoIncluir.xhtml" x="436" y="684" zoom="false"/>
+        <Node id="usuario_visualizar.xhtml" x="-225" y="298" zoom="true"/>
+        <Node id="usuario_alterar.xhtml" x="45" y="459" zoom="true"/>
+        <Node id="padrao.xhtml" x="416" y="262" zoom="true"/>
+        <Node id="produtolb.xhtml" x="224" y="552" zoom="true"/>
+        <Node id="VisualizarProduto.xhtml" x="313" y="659" zoom="true"/>
+        <Node id="ProdutoAlterar.xhtml" x="392" y="676" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

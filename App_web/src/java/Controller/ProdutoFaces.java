@@ -42,13 +42,13 @@ public class ProdutoFaces {
     
     public String preparaInclusao(){
         this.dto = new DtoProduto();
-        return "incluir";
+        return "Incluir";
     }
     
     public String finalizaInclusao() throws ClassNotFoundException, SQLException{
         produtoDao.setAdicionar(dto);
         this.listaProdutos = null;
-        return "voltarListagem";
+        return "VoltarListagem";
     }
     
     public String finalizaAlteracao() throws ClassNotFoundException, SQLException{
@@ -57,13 +57,12 @@ public class ProdutoFaces {
             System.out.println("Usuario alterado com sucesso");
             this.listaProdutos = null;          //Limpando o cache, para ver se já ta criado ou não o objeto
         }
-        return "VoltaAlterarListagem";
+        return "Alterar";
     }
     
     public String deletar() throws ClassNotFoundException, SQLException{
         produtoDao.setDeletar(dto);
         this.listaProdutos = null;
         return "Excluir";
-    }
-        
+    }        
 }
