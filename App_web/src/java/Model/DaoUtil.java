@@ -13,7 +13,7 @@ import java.sql.Statement;
      
      public Connection getConnection() throws ClassNotFoundException, SQLException{     //contrutor com o padrão singleton, para uma conexão com o banco
           if (cx == null){
-              String url = "jdbc:sqlite:G:\\Private\\SQLite\\Banco\\aula.db";
+              String url = "jdbc:sqlite:G:\\Private\\Banco\\aula.db";
               String usr = "";
               String psw = "";
               

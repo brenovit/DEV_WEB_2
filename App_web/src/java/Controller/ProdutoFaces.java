@@ -14,7 +14,7 @@ public class ProdutoFaces {
     private ProdutoDao produtoDao = new ProdutoDao();
     private DtoProduto dto;
     
-    public ProdutoFaces() {
+    public ProdutoFaces() {        
     }
 
     public ProdutoDao getProdutoDao() {
