@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"      
       xmlns:p="http://primefaces.org/ui">
-
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Gerenciador de Produtos e Usuários</title>
@@ -33,7 +33,7 @@
                             <a href="index.xhtml" class="navbar-brand">
                                 <small>
                                     <i class="fa fa-leaf"></i>
-                                    Ace Admin breno
+                                    Gerenciador
                                 </small>
                             </a>
                         </div>
@@ -45,20 +45,8 @@
                 <ui:insert name="menu">
                     <h:form>                
                         <div class="main-container ace-save-state" id="main-container">
-                            <script type="text/javascript">
-                                try {
-                                    ace.settings.loadState('main-container');
-                                } catch (e) {
-                                }
-                            </script>
 
-                            <div id="sidebar" class="sidebar responsive ace-save-state">
-                                <script type="text/javascript">
-                                    try {
-                                        ace.settings.loadState('sidebar');
-                                    } catch (e) {
-                                    }
-                                </script>
+                            <div id="sidebar" class="sidebar responsive ace-save-state">                               
 
                                 <ul class="nav nav-list">
                                     <li class="active">
