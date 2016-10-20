@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Visualizar Produto</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>Detalhe do Produto</h1>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td><h:outputLabel value="Código :"/></td>
+                        <td>
+                            <h:outputLabel value="#{produtoFaces.produtoselecionado.idproduto}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Nome :"/></td>
+                        <td>
+                            <h:outputLabel value="#{produtoFaces.produtoselecionado.nome}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Descrição :"/></td>
+                        <td>
+                            <h:outputLabel value="#{produtoFaces.produtoselecionado.descricao}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Valor :"/></td>
+                        <td>
+                            <h:outputLabel value="#{produtoFaces.produtoselecionado.preco}">
+                                  <f:convertNumber currencySymbol="R$" type="currency"></f:convertNumber>
+                            </h:outputLabel>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Validade :"/></td>
+                        <td>
+                            <h:outputLabel value="#{produtoFaces.produtoselecionado.validade}" >
+                                <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+                            </h:outputLabel>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>  
+            <br/>
+            <h:commandButton value="Alterar Produto"
+                             style="width: 48%"
+                             action="VaiParaAlterar"/>
+            <h:commandButton value="Voltar"
+                             style="width: 48%" 
+                             action="VoltarListagem"/>
+        </h:form>
+    </h:body>
+</html>
+
