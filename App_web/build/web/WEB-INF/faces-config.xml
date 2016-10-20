@@ -3,6 +3,11 @@
               xmlns="http://xmlns.jcp.org/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <managed-bean>
+        <managed-bean-name>vendaFaces</managed-bean-name>
+        <managed-bean-class>Controller.VendaFaces</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>       
         <navigation-case>
@@ -12,6 +17,10 @@
         <navigation-case>
             <from-outcome>UsuarioPrincipal</from-outcome>
             <to-view-id>/usuario_index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>VendaPrincipal</from-outcome>
+            <to-view-id>/venda_index.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <managed-bean>
@@ -69,8 +78,7 @@
     </navigation-rule>
     <managed-bean>
         <managed-bean-name>usuarioFaces</managed-bean-name>
-        <managed-bean-class>Controller.UsuarioFaces</managed-bean-class>
-    
+        <managed-bean-class>Controller.UsuarioFaces</managed-bean-class>    
         <managed-bean-scope>session</managed-bean-scope></managed-bean>
     <navigation-rule>
         <from-view-id>/usuario_index.xhtml</from-view-id>

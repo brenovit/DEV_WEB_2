@@ -5,49 +5,49 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"      
       xmlns:p="http://primefaces.org/ui">
-   <ui:decorate template="/padrao.xhtml">
+    <ui:decorate template="/padrao.xhtml">
         <ui:define name="centro">
-        <section id="main" class="container 75%">
-	<header>
-		<h2>Detalhe dos Produtos</h2>
-	</header>
-          <div class="box">
-              <h:form>  
-                  <div class="row uniform 50%">
-                        <h:outputLabel value="Código.: " />  
-                        <h:outputLabel value="#{produtoFaces.dto.idproduto}" />
-                </div> 
-                <div class="row uniform 50%">
-                        <h:outputLabel value="Nome.:"/>
-                        <h:outputLabel value="#{produtoFaces.dto.nome}"/>
-                </div> 
-                <div class="row uniform 50%">
-                    <h:outputLabel value="Descrição"/>
-                    <h:outputLabel value="#{produtoFaces.dto.descricao}"/>
-                </div> 
-                <div class="row uniform 50%">
-                    <h:outputLabel value="Valor:" />
-                    <h:outputLabel value="#{produtoFaces.dto.preco}"/>
-                </div> 
-                    <div class="row uniform 50%">
-                <h:outputLabel value="Validade:"/>
-                <h:outputLabel value="#{produtoFaces.dto.validade}">
-                    <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime> <!-- Convertendo data -->
-                </h:outputLabel>
-                    </div>             
+            <section id="main" class="container 75%">
+                <header>
+                    <h2>Detalhe dos Produtos</h2>
+                </header>
+                <div class="box">
+                    <h:form>  
+                        <div class="row uniform 50%">
+                            <h:outputLabel value="Código.: " />  
+                            <h:outputLabel value="#{produtoFaces.dto.idproduto}" />
+                        </div> 
+                        <div class="row uniform 50%">
+                            <h:outputLabel value="Nome.:"/>
+                            <h:outputLabel value="#{produtoFaces.dto.nome}"/>
+                        </div> 
+                        <div class="row uniform 50%">
+                            <h:outputLabel value="Descrição"/>
+                            <h:outputLabel value="#{produtoFaces.dto.descricao}"/>
+                        </div> 
+                        <div class="row uniform 50%">
+                            <h:outputLabel value="Valor:" />
+                            <h:outputLabel value="#{produtoFaces.dto.preco}"/>
+                        </div> 
+                        <div class="row uniform 50%">
+                            <h:outputLabel value="Validade:"/>
+                            <h:outputLabel value="#{produtoFaces.dto.validade}">
+                                <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime> <!-- Convertendo data -->
+                            </h:outputLabel>
+                        </div>             
 
-                     <div class="row uniform">
-                        <div class="12u">
-                           <ul class="actions align-center">
-                                <li><h:commandButton value="Alterar Produto" action="Alterar" /></li>
-                                <li><h:commandButton value="Voltar" action="VoltarListagem" /></li>
-                           </ul>
-                    </div>
-                   </div>
-            </h:form>
-            </div>    
-       </section>
+                        <div class="row uniform">
+                            <div class="12u">
+                                <ul class="actions align-center">
+                                    <li><h:commandButton value="Alterar Produto" action="Alterar" /></li>
+                                    <li><h:commandButton value="Voltar" action="VoltarListagem" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>    
+            </section>
         </ui:define>
-   </ui:decorate>
+    </ui:decorate>
 </html>
 

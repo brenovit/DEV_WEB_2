@@ -40,10 +40,12 @@
 
                         <h:commandButton value="Editar" action="Alterar">
                             <f:setPropertyActionListener target="#{produtoFaces.dto}" value="#{umItem}" />
-                        </h:commandButton >                             
+                        </h:commandButton >        
+                        &nbsp;
                         <h:commandButton value="Visualizar" action="Visualizar">
                             <f:setPropertyActionListener target="#{produtoFaces.dto}" value="#{umItem}" />
                         </h:commandButton>
+                        &nbsp;
                         <h:commandButton value="Excluir" action="#{produtoFaces.deletar()}">
                             <f:setPropertyActionListener target="#{produtoFaces.dto}" value="#{umItem}" />        <!-- seleciona uma tupla -->
                         </h:commandButton > 
