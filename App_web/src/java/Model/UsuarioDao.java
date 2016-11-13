@@ -1,4 +1,3 @@
-
 package Model;
 
 import Dto.DtoUsuario;
@@ -7,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
-
 
 public class UsuarioDao extends DaoUtil{
 
@@ -43,7 +41,6 @@ public class UsuarioDao extends DaoUtil{
          
          return ret > 0; // retorna se foi sucesso ou não a incersão de objeto 
     }
-    
     
     public boolean setDeletar(DtoUsuario user) throws ClassNotFoundException, SQLException{
         String sql = "DELETE FROM tbUsuario "+

@@ -1,4 +1,3 @@
-
 package Model;
 
 import java.sql.Connection;
@@ -7,13 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
  abstract public class DaoUtil {        //Uma classe abstrata não pode ser instanciada
      private Connection cx = null;
      
      public Connection getConnection() throws ClassNotFoundException, SQLException{     //contrutor com o padrão singleton, para uma conexão com o banco
           if (cx == null){
-              String url = "jdbc:sqlite:F:\\Private\\Estudo\\Unijorge\\DEV-WEB\\App_web\\libs\\aula.db";
+              String url = "jdbc:sqlite:H:\\Unijorge\\DEV_WEB_2\\Banco\\aula.db";
               String usr = "";
               String psw = "";
               
@@ -36,7 +34,5 @@ import java.sql.Statement;
     
      public Statement getStatement() throws ClassNotFoundException, SQLException{
          return this.getConnection().createStatement();
-     } 
-     
-     
-}
+     }
+ }

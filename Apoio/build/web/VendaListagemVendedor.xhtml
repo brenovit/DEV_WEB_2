@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>Listagem de Vendas</h1>
+            <table>
+                <tr>
+                    <td> <h:outputLabel value="VENDEDOR: "/> </td>
+                    <td>
+                        <h:selectOneMenu value="#{vendaFaces.venda.usuario.idusuario}">
+                            <f:selectItem itemLabel="Todos"
+                                          itemValue="0"/>
+                            <f:selectItems var="vendedor"
+                                           value="#{usuarioFaces.usuarios}"
+                                           itemLabel="#{vendedor.nome}"
+                                           itemValue="#{vendedor.idusuario}"/>
+                        </h:selectOneMenu>
+                    </td>
+                </tr>
+            </table>
+            <h:commandButton value="Buscar" style="width: 95%" action="#{vendaFaces.buscaVendasVendedor()}"/>
+            <h:commandButton value="Voltar" style="width: 95%" action="#{vendaFaces.voltarPrincipal()}"/>
+            <br/>
+            <h:dataTable var="item"
+                         border="1"
+                         value="#{vendaFaces.listaVendas}"
+                         style="width: 95%">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="CÓDIGO"/>
+                    </f:facet>
+                    <h:outputLabel value="#{item.idVenda}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="VENDEDOR"/>
+                    </f:facet>
+                    <h:outputLabel value="#{item.usuario.nome}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="PRODUTO"/>
+                    </f:facet>
+                    <h:outputLabel value="#{item.produto.nome}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="VALOR"/>
+                    </f:facet>
+                    <h:outputLabel value="#{item.produto.preco}">
+                        <f:convertNumber currencySymbol="R$" type="currency">
+                        </f:convertNumber>
+                    </h:outputLabel>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="VENDA"/>
+                    </f:facet>
+                    <h:outputLabel value="#{item.vlvenda}">
+                        <f:convertNumber currencySymbol="R$" type="currency">
+                        </f:convertNumber>
+                    </h:outputLabel>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="DESCONTO"/>
+                    </f:facet>
+                    <h:outputLabel value="#{item.produto.preco - item.vlvenda}">
+                        <f:convertNumber currencySymbol="R$" type="currency">
+                        </f:convertNumber>
+                    </h:outputLabel>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="AÇÃO"/>
+                    </f:facet>                    
+                    <h:commandLink value="Excluir" action="#{vendaFaces.finalizaDelecao()}">
+                        <f:setPropertyActionListener target="#{vendaFaces.venda}" value="#{umItem}" />
+                    </h:commandLink>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+        
+    </h:body>
+</html>
+

@@ -13,6 +13,14 @@ public class UsuarioFaces {
 
     public UsuarioFaces() {
     }
+    
+    public DtoUsuario getDto() {
+        return dto;
+    }
+    
+    public void setDto(DtoUsuario dto) {
+        this.dto = dto;
+    }
 
     public List<DtoUsuario> getListaUsuarios() throws ClassNotFoundException, SQLException {
         if (listaUsuarios == null) {
@@ -24,23 +32,7 @@ public class UsuarioFaces {
     public void setListaUsuarios(List<DtoUsuario> listaUsuarios) {
         this.listaUsuarios = listaUsuarios;
     }
-
-    public UsuarioDao getUsuarioDao() {
-        return usuarioDao;
-    }
-
-    public void setUsuarioDao(UsuarioDao usuarioDao) {
-        this.usuarioDao = usuarioDao;
-    }
-
-    public DtoUsuario getDto() {
-        return dto;
-    }
-
-    public void setDto(DtoUsuario dto) {
-        this.dto = dto;
-    }
-
+        
     public String PreparaInclusao() {
         this.dto = new DtoUsuario();
         return "Incluir";
@@ -49,7 +41,7 @@ public class UsuarioFaces {
     public String IncluirUsuario() throws ClassNotFoundException, SQLException {
         if (usuarioDao.setAdicionar(dto)) {
             this.listaUsuarios = null;
-            this.dto = null;
+            //this.dto = null;
         }
         return "VoltarListagem";
     }

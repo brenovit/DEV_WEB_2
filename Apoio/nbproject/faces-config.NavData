@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="VendaListagem.xhtml" x="898" y="165" zoom="true"/>
+        <Node id="VendaListagemVendedor.xhtml" x="1156" y="165" zoom="true"/>
+        <Node id="index.xhtml" x="661" y="52" zoom="true"/>
+        <Node id="ProdutoVizualisar.xhtml" x="98" y="360" zoom="true"/>
+        <Node id="ProdutoListagem.xhtml" x="599" y="348" zoom="true"/>
+        <Node id="VendaIncluir.xhtml" x="905" y="356" zoom="true"/>
+        <Node id="ProdutoIncluir.xhtml" x="286" y="244" zoom="true"/>
+        <Node id="ProdutoAlterar.xhtml" x="227" y="37" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
