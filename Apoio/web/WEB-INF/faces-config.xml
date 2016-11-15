@@ -13,10 +13,6 @@
             <from-outcome>ListagemVenda</from-outcome>
             <to-view-id>/VendaListagem.xhtml</to-view-id>
         </navigation-case>
-        <navigation-case>
-            <from-outcome>ListagemVendaVendedor</from-outcome>
-            <to-view-id>/VendaListagemVendedor.xhtml</to-view-id>
-        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/ProdutoListagem.xhtml</from-view-id>
@@ -37,7 +33,7 @@
             <to-view-id>/ProdutoVizualisar.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>refresh</from-outcome>
+            <from-outcome>Atualizar</from-outcome>
             <to-view-id>/ProdutoListagem.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
@@ -76,41 +72,30 @@
         <managed-bean-class>CONTROLLER.VendaFaces</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
-    <navigation-rule>
-        <from-view-id>/VendaListagem.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>VoltarPrincipal</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>Deletar</from-outcome>
-            <to-view-id>/VendaListagem.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>VaiParaNovavenda</from-outcome>
-            <to-view-id>/VendaIncluir.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
     <managed-bean>
         <managed-bean-name>usuarioFaces</managed-bean-name>
         <managed-bean-class>CONTROLLER.UsuarioFaces</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
     <navigation-rule>
-        <from-view-id>/VendaListagemVendedor.xhtml</from-view-id>
+        <from-view-id>/VendaListagem.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Atualizar</from-outcome>
+            <to-view-id>/VendaListagem.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>IncluirVenda</from-outcome>
+            <to-view-id>/VendaIncluir.xhtml</to-view-id>
+        </navigation-case>
         <navigation-case>
             <from-outcome>VoltarPrincipal</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>buscaVendaVendedor</from-outcome>
-            <to-view-id>/VendaListagemVendedor.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/VendaIncluir.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>VoltaParaListagem</from-outcome>
+            <from-outcome>VoltarListagem</from-outcome>
             <to-view-id>/VendaListagem.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>

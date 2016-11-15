@@ -8,7 +8,7 @@ import java.util.List;
 public class ProdutoFaces {
     private final ProdutoDAO proDao = new ProdutoDAO();
     private DtoProduto produto;
-    List<DtoProduto> listaProdutos = null;
+    private List<DtoProduto> listaProdutos = null;
     
     public ProdutoFaces() {
     }
@@ -49,7 +49,7 @@ public class ProdutoFaces {
     public String finalizaDelecaoo() throws ClassNotFoundException, SQLException{
         proDao.setDeletar(produto);
         this.listaProdutos = null;
-        return "refresh";
+        return "Atualizar";
     }
     
     public String listagemProduto(){

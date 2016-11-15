@@ -4,7 +4,6 @@ import DTO.DtoProduto;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -47,9 +46,10 @@ public class ProdutoDAO extends DaoUtil{
 
     public boolean setDeletar(DtoProduto produto) throws ClassNotFoundException, SQLException {
         String sql = "DELETE FROM tbProduto WHERE idProduto = ?";
-
+        
         PreparedStatement ps = super.getPreparedStatement(sql);
         ps.setInt(1, produto.getIdproduto());
+        
         int ret = ps.executeUpdate();
         ps.close();
         super.close();
@@ -74,20 +74,22 @@ public class ProdutoDAO extends DaoUtil{
     }
 
     public DtoProduto getPorId(DtoProduto produto) throws ClassNotFoundException, SQLException {
-        DtoProduto lstRet = new DtoProduto();
+        DtoProduto prod = new DtoProduto();
         String sql = "SELECT idProduto, nome, preco,validade, descricao FROM tbProduto WHERE idProduto = ?";
         PreparedStatement ps = super.getPreparedStatement(sql);
         ps.setInt(1, produto.getIdproduto());
         ResultSet rs = ps.executeQuery();
+        
         while (rs.next()) {
-            lstRet.setIdproduto(rs.getInt("idProduto"));
-            lstRet.setNome(rs.getString("nome"));
-            lstRet.setPreco(rs.getDouble("preco"));
-            lstRet.setValidade(rs.getDate("validade"));
-            lstRet.setDescricao(rs.getString("descricao"));
+            produto.setIdproduto(rs.getInt("idProduto"));
+            prod.setNome(rs.getString("nome"));
+            prod.setPreco(rs.getDouble("preco"));
+            prod.setValidade(rs.getDate("validade"));
+            prod.setDescricao(rs.getString("descricao"));
         }
+        
         rs.close();
         super.close();
-        return lstRet;
+        return prod;
     }
 }
