@@ -7,24 +7,24 @@ package Dto;
 
 /**
  *
- * @author alunoads
+ * @author breno.arantes
  */
-public class DtoUsuario {
+public class Usuario {
     private String nome;
     private String login;
     private String senha;
     private String email;
     private int id;
+    
+    private boolean logado = false;
 
-    public DtoUsuario() {
-    }
-
-    public DtoUsuario(int id, String nome, String login, String senha) {
-        this.nome = nome;
+    public Usuario(String login, String senha) {
         this.login = login;
         this.senha = senha;
-        this.id = id;
     }
+
+    public Usuario() {
+    }   
     
     public String getNome() {
         return nome;
@@ -50,6 +50,14 @@ public class DtoUsuario {
         this.senha = senha;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public int getId() {
         return id;
     }
@@ -58,11 +66,13 @@ public class DtoUsuario {
         this.id = id;
     }
 
-    public String getEmail() {
-       return email;
+    public boolean isLogado() {
+        return logado;
     }
-    public void setEmail(String email) {
-       this.email = email;
-    }    
+
+    public void setLogado(boolean logado) {
+        this.logado = logado;
+    }
+    
     
 }

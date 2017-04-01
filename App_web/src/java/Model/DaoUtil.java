@@ -14,9 +14,12 @@ import java.sql.Statement;
               String url = "jdbc:sqlite:H:\\Unijorge\\DEV_WEB_2\\Banco\\aula.db";
               String usr = "";
               String psw = "";
-              
-              Class.forName("org.sqlite.JDBC");   
-              cx = DriverManager.getConnection(url, usr, psw);
+                           
+              String sqlserver = "jdbc:sqlserver://;database=;user=;password=;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+			//Class.forName("org.sqlite.JDBC");  
+              //Class.forName("net.sourceforge.jtds.jdbc.Driver");
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+              cx = DriverManager.getConnection(sqlserver);
           }    
          return cx;
      }

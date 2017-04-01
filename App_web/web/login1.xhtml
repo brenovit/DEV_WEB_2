@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"      >
+    <head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form enctype="multipart/form-data" id="myForm">
+            <h2>Login</h2>
+            <p>Usuario</p>
+            <h:inputText id="txtUsuario" value="#{loginController.login}"/>
+            <p>Senha</p>
+            <h:inputText id="txtSenha" value="#{loginController.senha}"/>
+            <br/>
+            <h:commandButton value="logar" action="#{loginController.AcessarSistema()}"/>
+        </h:form>
+    </body>
+</html>

@@ -16,7 +16,7 @@ public class ProdutoDao extends DaoUtil {
     }
     
     public boolean setAdicionar(DtoProduto produto) throws ClassNotFoundException, SQLException{
-        String sql = "INSERT INTO tbProduto (nome, preco, validade, descricao)" + //query para adicionar 
+        String sql = "INSERT INTO produto (nome, preco, validade, descricao)" + //query para adicionar 
                 "VALUES (?,?,?,?)";
          PreparedStatement ps = super.getPreparedStatement(sql);    //Contém agora toda a consulta da query
          ps.setString(1,produto.getNome());
@@ -32,7 +32,7 @@ public class ProdutoDao extends DaoUtil {
     
     
     public boolean setAlterar(DtoProduto produto) throws ClassNotFoundException, SQLException{
-        String sql = "UPDATE tbProduto SET "+
+        String sql = "UPDATE produto SET "+
                      "nome = ?, preco = ?, validade = ?, descricao = ? " + 
                      "WHERE idProduto = ?";
         
@@ -51,7 +51,7 @@ public class ProdutoDao extends DaoUtil {
     
     
     public boolean setDeletar(DtoProduto produto) throws ClassNotFoundException, SQLException{
-        String sql = "DELETE FROM tbProduto "+
+        String sql = "DELETE FROM produto "+
                      "WHERE idProduto = ?";
         
          PreparedStatement ps = super.getPreparedStatement(sql);
@@ -64,7 +64,7 @@ public class ProdutoDao extends DaoUtil {
     
     public List<DtoProduto> getRetornaTodos() throws ClassNotFoundException, SQLException{
         List<DtoProduto> lstRet = new LinkedList<DtoProduto>();
-        String sql = "SELECT idProduto, nome, preco, validade, descricao FROM tbProduto";
+        String sql = "SELECT id, nome, preco, validade, descricao FROM tbProduto";
         
         ResultSet rs = super.getStatement().executeQuery(sql);
         while(rs.next()){

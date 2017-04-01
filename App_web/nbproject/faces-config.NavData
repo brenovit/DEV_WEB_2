@@ -2,17 +2,19 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="usuario_visualizar.xhtml" x="-225" y="298" zoom="true"/>
-        <Node id="usuario_alterar.xhtml" x="45" y="459" zoom="true"/>
-        <Node id="produto_alterar.xhtml" x="677" y="579" zoom="true"/>
-        <Node id="produto_visualizar.xhtml" x="815" y="476" zoom="true"/>
-        <Node id="index.xhtml" x="414" y="329" zoom="true"/>
-        <Node id="produto_incluir.xhtml" x="744" y="165" zoom="true"/>
-        <Node id="padrao.xhtml" x="416" y="178" zoom="true"/>
-        <Node id="usuario_incluir.xhtml" x="69" y="129" zoom="true"/>
-        <Node id="produto_index.xhtml" x="676" y="326" zoom="true"/>
-        <Node id="usuario_index.xhtml" x="84" y="307" zoom="true"/>
-        <Node id="venda_index.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="produto_visualizar.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="produto_alterar.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="index.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="produto_incluir.xhtml" x="123" y="157" zoom="true"/>
+        <Node id="usuario_incluir.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="usuario_index.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="produto_index.xhtml" x="140" y="316" zoom="true"/>
+        <Node id="login1.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="usuario_visualizar.xhtml" x="504" y="26" zoom="true"/>
+        <Node id="usuario_alterar.xhtml" x="180" y="23" zoom="true"/>
+        <Node id="padrao.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="login/login.xhtml" x="1130" y="349" zoom="true"/>
+        <Node id="venda_index.xhtml" x="900" y="150" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>
