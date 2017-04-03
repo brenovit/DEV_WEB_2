@@ -15,8 +15,8 @@ import java.sql.Statement;
               String usr = "";
               String psw = "";
                            
-              String sqlserver = "jdbc:sqlserver://;database=;user=;password=;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
-			//Class.forName("org.sqlite.JDBC");  
+              String sqlserver = "jdbc:sqlserver://senhas.database.windows.net:1433;database=GerenciadorContas;user=production@senhas;password=_RucA_AC3ep2;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+            //Class.forName("org.sqlite.JDBC");  
               //Class.forName("net.sourceforge.jtds.jdbc.Driver");
               Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
               cx = DriverManager.getConnection(sqlserver);

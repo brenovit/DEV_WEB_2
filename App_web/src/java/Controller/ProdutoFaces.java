@@ -3,12 +3,13 @@ package Controller;
 
 import Dto.DtoProduto;
 import Model.ProdutoDao;
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.List;
 
 
 //@Named(value = "ProdutoFaces")
-public class ProdutoFaces {
+public class ProdutoFaces implements Serializable{
     
     private List<DtoProduto> listaProdutos = null;
     private ProdutoDao produtoDao = new ProdutoDao();

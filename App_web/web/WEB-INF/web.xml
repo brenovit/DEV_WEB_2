@@ -10,7 +10,7 @@
     </context-param>
     <filter-mapping>
         <filter-name>pageFilter</filter-name>
-        <url-pattern>/App_web/*</url-pattern>
+        <url-pattern>/App_web/views/*</url-pattern>
     </filter-mapping>
     <listener>
         <listener-class>Utils.SessionListener</listener-class>
@@ -30,6 +30,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>views/index.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>

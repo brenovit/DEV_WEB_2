@@ -41,7 +41,7 @@ public class UsuarioFaces {
     public String IncluirUsuario() throws ClassNotFoundException, SQLException {
         if (usuarioDao.setAdicionar(dto)) {
             this.listaUsuarios = null;
-            //this.dto = null;
+            this.dto = new DtoUsuario();
         }
         return "VoltarListagem";
     }

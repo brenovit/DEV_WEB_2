@@ -31,7 +31,7 @@ public class SessionContext {
         System.out.println("Utils.SessionContext.encerraSessao()");
         currentExternalContext().invalidateSession();
     }
-
+    
     public Object getAttribute(String name) {
         System.out.println("Utils.SessionContext.getAttribute()");
         return currentExternalContext().getSessionMap().get(name);

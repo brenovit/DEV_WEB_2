@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:decorate template="/views/padrao.xhtml">
+        <ui:define name="centro">
+            <header>
+                <h2>Incluir Produto</h2>
+                <p>Insira os dados do produto a ser cadastrado</p>
+            </header>
+            <div>
+                <h:form>        
+                    <div class="row uniform 50%">
+                        <h:outputLabel value="Nome:"/>
+                        <h:inputText value="#{produtoFaces.dto.nome}" maxlength="100"/>  <!--maxlength.: o usuario só poderá inserir 100 digitos-->
+                    </div> 
+                    <div class="row uniform 50%">
+                        <h:outputLabel value="Descrição"/>
+                        <h:inputText value="#{produtoFaces.dto.descricao}"/>
+                    </div> 
+                    <div class="row uniform 50%">
+                        <h:outputLabel value="Valor: " />
+                        <h:inputText value="#{produtoFaces.dto.preco}"/>
+                    </div> 
+                    <div class="row uniform 50%">
+                        <h:outputLabel value="Validade:"/>
+                        <h:inputText value="#{produtoFaces.dto.validade}">
+                            <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime> <!-- Convertendo data -->
+                        </h:inputText>
+                    </div>
+                    <div>
+                        <h:commandButton value="Inserir" action="#{produtoFaces.finalizaInclusao()}"/>
+                        $nbsp;
+                        <h:commandButton value="Voltar" action="VoltarListagem" />
+                    </div>                
+                </h:form>
+            </div>
+        </ui:define>
+    </ui:decorate>
+</html>
+

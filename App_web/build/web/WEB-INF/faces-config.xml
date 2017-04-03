@@ -8,124 +8,137 @@
         <managed-bean-class>Controller.VendaFaces</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
-    <navigation-rule>
-        <from-view-id>/index.xhtml</from-view-id>       
-        <navigation-case>
-            <from-outcome>ProdutoPrincipal</from-outcome>
-            <to-view-id>/produto_index.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>UsuarioPrincipal</from-outcome>
-            <to-view-id>/usuario_index.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>VendaPrincipal</from-outcome>
-            <to-view-id>/venda_index.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
     <managed-bean>
         <managed-bean-name>produtoFaces</managed-bean-name>
         <managed-bean-class>Controller.ProdutoFaces</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>  
+    <managed-bean>
+        <managed-bean-name>loginController</managed-bean-name>
+        <managed-bean-class>Controller.LoginController</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>     
-    <navigation-rule>
-        <from-view-id>/produto_index.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>Alterar</from-outcome>
-            <to-view-id>/produto_alterar.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>Visualizar</from-outcome>
-            <to-view-id>/produto_visualizar.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>Excluir</from-outcome>
-            <to-view-id>/produto_index.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>Incluir</from-outcome>
-            <to-view-id>/produto_incluir.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>Voltar</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/produto_alterar.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>VoltarListagem</from-outcome>
-            <to-view-id>/produto_index.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/produto_visualizar.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>Alterar</from-outcome>
-            <to-view-id>/produto_alterar.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>VoltarListagem</from-outcome>
-            <to-view-id>/produto_index.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/produto_incluir.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>VoltarListagem</from-outcome>
-            <to-view-id>/produto_index.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
     <managed-bean>
         <managed-bean-name>usuarioFaces</managed-bean-name>
         <managed-bean-class>Controller.UsuarioFaces</managed-bean-class>    
-        <managed-bean-scope>session</managed-bean-scope></managed-bean>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
     <navigation-rule>
-        <from-view-id>/usuario_index.xhtml</from-view-id>
+        <from-view-id>/views/index.xhtml</from-view-id>       
         <navigation-case>
-            <from-outcome>Voltar</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
+            <from-outcome>ProdutoPrincipal</from-outcome>
+            <to-view-id>/views/produto_index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
+            <from-outcome>UsuarioPrincipal</from-outcome>
+            <to-view-id>/views/usuario_index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>    
+    <navigation-rule>
+        <from-view-id>/views/produto_index.xhtml</from-view-id>
+        <navigation-case>
             <from-outcome>Alterar</from-outcome>
-            <to-view-id>/usuario_alterar.xhtml</to-view-id>
+            <to-view-id>//views/produto_alterar.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>Visualizar</from-outcome>
-            <to-view-id>/usuario_visualizar.xhtml</to-view-id>
+            <to-view-id>/views/produto_visualizar.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>Excluir</from-outcome>
-            <to-view-id>/usuario_index.xhtml</to-view-id>
+            <to-view-id>/views/produto_index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>Incluir</from-outcome>
-            <to-view-id>/usuario_incluir.xhtml</to-view-id>
+            <to-view-id>/views/produto_incluir.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Voltar</from-outcome>
+            <to-view-id>/views/index.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/usuario_alterar.xhtml</from-view-id>
+        <from-view-id>//views/produto_alterar.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>VoltarListagem</from-outcome>
-            <to-view-id>/usuario_index.xhtml</to-view-id>
+            <to-view-id>/views/produto_index.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/usuario_incluir.xhtml</from-view-id>
+        <from-view-id>/views/produto_visualizar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Alterar</from-outcome>
+            <to-view-id>//views/produto_alterar.xhtml</to-view-id>
+        </navigation-case>
         <navigation-case>
             <from-outcome>VoltarListagem</from-outcome>
-            <to-view-id>/usuario_index.xhtml</to-view-id>
+            <to-view-id>/views/produto_index.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/usuario_visualizar.xhtml</from-view-id>
+        <from-view-id>/views/produto_incluir.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>VoltarListagem</from-outcome>
-            <to-view-id>/usuario_index.xhtml</to-view-id>
+            <to-view-id>/views/produto_index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/views/usuario_index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Voltar</from-outcome>
+            <to-view-id>/views/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>Alterar</from-outcome>
-            <to-view-id>/usuario_alterar.xhtml</to-view-id>
+            <to-view-id>/views/usuario_alterar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Visualizar</from-outcome>
+            <to-view-id>/views/usuario_visualizar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Excluir</from-outcome>
+            <to-view-id>/views/usuario_index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Incluir</from-outcome>
+            <to-view-id>/views/usuario_incluir.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/views/usuario_alterar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>VoltarListagem</from-outcome>
+            <to-view-id>/views/usuario_index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/views/usuario_incluir.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>VoltarListagem</from-outcome>
+            <to-view-id>/views/usuario_index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/views/usuario_visualizar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>VoltarListagem</from-outcome>
+            <to-view-id>/views/usuario_index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Alterar</from-outcome>
+            <to-view-id>/views/usuario_alterar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Logar</from-outcome>
+            <to-view-id>/views/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Retornar</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>

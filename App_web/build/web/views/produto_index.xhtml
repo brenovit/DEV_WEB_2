@@ -5,12 +5,13 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"      
       xmlns:p="http://primefaces.org/ui">
-    <ui:decorate template="/padrao.xhtml">
+    <ui:decorate template="/views/padrao.xhtml">
         <ui:define name="centro">
             <h:form>
                 <br />
-                <h:commandButton value="Voltar" action="Voltar" style="width: 71%"/><br/><br/>
-                <h:commandButton value="Incluir" action="#{produtoFaces.preparaInclusao()}" style="width: 71%"/>
+                <h:commandButton value="Voltar" action="Voltar"/>
+                &nbsp;
+                <h:commandButton value="Incluir" action="#{produtoFaces.preparaInclusao()}"/>
                 <br/><br/>
 
                 <h:dataTable var="umItem" border="1" value="#{produtoFaces.lista}">

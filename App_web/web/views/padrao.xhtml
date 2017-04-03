@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"      
-      xmlns:p="http://primefaces.org/ui">>
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Gerenciador de Produtos e Usuários</title>     
@@ -13,25 +13,17 @@
     <h:body>
         <p:layout class="no-skin">  
             <p:layoutUnit position="north">               
-                <a href="index.xhtml" class="navbar-brand">
-                    <small>
-                        <i class="fa fa-leaf"></i>
-                        Gerenciador
-                    </small>
-                </a>                        
+                <a href="index.xhtml">
+                    Gerenciador
+                </a>
             </p:layoutUnit>
 
-            <p:layoutUnit position="west" size="200">
-                <h:form> 
-                    <p:menu>
-                        <p:menuitem value="Home" icon="fa-plus">
-                            <a href="index.xhtml"></a>
-                        </p:menuitem>
-                        <p:menuitem value="Produtos" icon="fa-plus"></p:menuitem>
-                        <p:menuitem value="Usuarkhgjhgio" icon="fa-plus"></p:menuitem>
-                        <p:menuitem value="Venda" icon="fa-plus"></p:menuitem>
-                    </p:menu>
-                </h:form>
+            <p:layoutUnit position="west">
+                <h:form>
+                    <h:commandLink value="Produtos" action="produto_index"/> <br /> <br />
+                    <h:commandLink value="Usuário" action="usuario_index"/>  <br /> <br />
+                    <h:commandLink value="Venda" action="venda_index"/>  <br /> <br />                    
+                </h:form>            
             </p:layoutUnit> 
 
             <p:layoutUnit position="center">  

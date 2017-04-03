@@ -2,6 +2,8 @@ package Utils;
 
 import Dto.Usuario;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -21,47 +23,27 @@ public class PageFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        /*        
-//recupera a sess]ao atual ou cria uma nova
-        HttpSession ses = ((HttpServletRequest) request).getSession(true);
-        //recuperamos a pagina atual
-        String newCurrentPage = ((HttpServletRequest) request).getServletPath();
-        //verifica-se se a pagina já não está gravada na sessão. caso não esteja salvamos ela como ultima pagina e atual
-        if (ses.getAttribute("currentPage") == null) {
-            ses.setAttribute("lastPage", newCurrentPage);
-            ses.setAttribute("currentPage", newCurrentPage);
-        } else {
-            String oldCurrentPage = ses.getAttribute("currentPage").toString();
-            if (!oldCurrentPage.equals(newCurrentPage)) {
-                ses.setAttribute("lastPage", oldCurrentPage);
-                ses.setAttribute("currentPage", newCurrentPage);
-            }
-        }
-        
-chain.doFilter(request, response);
-         */
-//Verifica se a sessão não expirou, se sim volta para a página de login
-        HttpSession session = ((HttpServletRequest) request).getSession(false);
+        System.out.println("============== Utils.PageFilter.doFilter()");
+        //Verifica se a sessão não expirou, se sim volta para a página de login
+        /*HttpSession session = ((HttpServletRequest) request).getSession(true);
         Usuario user = (Usuario) ((HttpServletRequest) request).getAttribute("usuario");
+        String ultimoAcesso = (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(new Date(session.getLastAccessedTime()));
+        System.out.println("Filtrando em: " + ultimoAcesso);
         //Usuario user1 = (Usuario) SessionContext.getInstance().getAttribute("user");
+        String contextPath = ((HttpServletRequest) request).getContextPath();
+        System.out.println("contextPath: " + contextPath);
 
-        if (session == null && (user == null || !user.isLogado())) {
-            String contextPath = ((HttpServletRequest) request).getContextPath();
-            //Redirecionamos o usuário imediatamente 
-            //para a página de login.xhtml
-            ((HttpServletResponse) response).sendRedirect(contextPath + "/login/login.xhtml");
+        if (user == null) {
+            System.out.println("Usuario nulo.");
+            //Redirecionamos o usuário imediatamente para a página login.xhtml
+            ((HttpServletResponse) response).sendRedirect(contextPath + "/login.xhtml");
         } else {
-            //Caso ele esteja logado, apenas deixamos 
-            //que o fluxo continue
+            System.out.println("Usuario: " + user.getNome());
             chain.doFilter(request, response);
-        }
-/*
-        if (session != null && !session.isNew()) {
-            chain.doFilter(request, response);
-        } else {
-            //Retorna para a página de login
-            ((HttpServletResponse) response).sendRedirect(((HttpServletRequest) request).getContextPath() + "/login.xhtml");
         }*/
+        //Caso ele esteja logado, apenas deixamos que o fluxo continue     
+        chain.doFilter(request, response);
+        System.out.println("============== Utils.PageFilter.doFilter()");
 
     }
 
@@ -69,5 +51,4 @@ chain.doFilter(request, response);
     public void destroy() {
 
     }
-
 }
