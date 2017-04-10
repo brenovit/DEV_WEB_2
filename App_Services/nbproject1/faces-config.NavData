@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="views/index.xhtml" x="244" y="73" zoom="true"/>
+        <Node id="views/produto_alterar.xhtml" x="607" y="11" zoom="true"/>
+        <Node id="views/produto_incluir.xhtml" x="224" y="487" zoom="true"/>
+        <Node id="views/usuario_incluir.xhtml" x="433" y="381" zoom="true"/>
+        <Node id="views/parado/page1.xhtml" x="609" y="-23" zoom="true"/>
+        <Node id="views/parado/padrao_1.xhtml" x="609" y="43" zoom="true"/>
+        <Node id="views/usuario_visualizar.xhtml" x="667" y="138" zoom="true"/>
+        <Node id="login.xhtml" x="-71" y="20" zoom="true"/>
+        <Node id="views/parado/venda_index.xhtml" x="610" y="76" zoom="true"/>
+        <Node id="views/produto_index.xhtml" x="54" y="333" zoom="true"/>
+        <Node id="views/padrao.xhtml" x="386" y="-23" zoom="true"/>
+        <Node id="views/usuario_alterar.xhtml" x="705" y="429" zoom="true"/>
+        <Node id="views/produto_visualizar.xhtml" x="-34" y="129" zoom="true"/>
+        <Node id="views/usuario_index.xhtml" x="471" y="247" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

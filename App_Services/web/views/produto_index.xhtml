@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:p="http://primefaces.org/ui">
+    <ui:decorate template="/views/padrao.xhtml">
+        <ui:define name="centro">
+            <h:form>
+                <br />
+                <h:commandButton value="Voltar" action="Voltar"/>
+                &nbsp;
+                <h:commandButton value="Incluir" action="#{produtoFaces.preparaInclusao()}"/>
+                <br/><br/>
+
+                <h:dataTable var="umItem" border="1" value="#{produtoFaces.lista}">
+                    <h:column>    				
+                        <f:facet name="header">codigo</f:facet>    				
+                            #{umItem.idproduto}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">nome</f:facet>
+                            #{umItem.nome}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header"><h:outputLabel value="Valor"/></f:facet>
+                        <h:outputLabel value="#{umItem.preco}">
+                            <f:convertNumber type="currency" currencySymbol="BR"/>
+                        </h:outputLabel>
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header"><h:outputLabel>Validade</h:outputLabel></f:facet>
+                                #{umItem.validade}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Ação</f:facet>
+
+                        <h:commandButton value="Editar" action="Alterar">
+                            <f:setPropertyActionListener target="#{produtoFaces.dto}" value="#{umItem}" />
+                        </h:commandButton >        
+                        &nbsp;
+                        <h:commandButton value="Visualizar" action="Visualizar">
+                            <f:setPropertyActionListener target="#{produtoFaces.dto}" value="#{umItem}" />
+                        </h:commandButton>
+                        &nbsp;
+                        <h:commandButton value="Excluir" action="#{produtoFaces.deletar()}">
+                            <f:setPropertyActionListener target="#{produtoFaces.dto}" value="#{umItem}" />        <!-- seleciona uma tupla -->
+                        </h:commandButton > 
+
+                    </h:column>
+
+                </h:dataTable>
+            </h:form>    
+
+        </ui:define>
+    </ui:decorate>
+</html>
+
